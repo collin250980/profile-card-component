@@ -1,0 +1,154 @@
+*, ::before, ::after{
+   box-sizing: border-box;
+   margin: 0;
+   top: 0;
+}
+
+:root{
+   --darkCyan: hsl(185, 75%, 39%);
+   --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+   --darkGrayishBlue: hsl(227, 10%, 46%);
+   --darkgrey: hsl(0, 0%, 59%);
+}
+
+
+body
+{
+   min-height: 100vh;
+   background-color: var(--darkCyan);
+   background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+   background-repeat: no-repeat, no-repeat;
+   background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+   font-family: 'Kumbh Sans', sans-serif;
+}
+
+main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+
+.card-wrapper{
+   position: relative;
+   width: 350px;
+   height: 374px;
+   background: #FFFFFF;
+   border-radius: 15px;
+   box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+   overflow: hidden;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: flex-start;
+}
+
+.card-header{
+   width: 100%;
+   height: 140px;
+   background-image: url(images/bg-pattern-card.svg);
+}
+
+.user-picture{
+   position: absolute;
+   height: 96px;
+   width: 96px;
+   border: 5px solid #FFFFFF;
+   border-radius: 50%;
+   background-image: url(images/image-victor.jpg);
+   top: 92px;
+   left: 127px;
+}
+
+.card-body{
+   width: 100%;
+   height: calc(100% - 140px);
+}
+
+.user-infos{
+   width: 135px;
+   height: 23px;
+   margin-top: 72px;
+   margin-left: 108px;
+   display: flex;
+   justify-content: center;
+}
+
+.user-infos .name{
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 18px;
+   color: var(--veryDarkDesaturatedBlue);
+}
+
+.user-infos .age{
+   margin-left: 8.5px;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 18px;
+   color: var(--darkGrayishBlue)
+}
+
+.user-city{
+   margin-top: 8px;
+   text-align: center;
+   font-size: 14px;
+   line-height: 14px;
+   font-weight: 400;
+   color: var(--darkGrayishBlue);
+}
+
+.separator{
+   width: 100%;
+   border: 1px solid rgb(232,233,236);
+   margin-top: 28px;
+}
+
+.stats{
+   margin-top: 24px;
+   margin-left: 47px;
+   text-align: center;
+   width: 249px;
+   height: 40px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.stats1, .stats2, .stats3{
+   width: calc(100% / 3);
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.stats1-number, .stats2-number, .stats3-number{
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 700;
+   color: var(--veryDarkDesaturatedBlue);
+}
+
+.stats1-title, .stats2-title, .stats3-title{
+   font-size: 10px;
+   line-height: 10px;
+   font-weight: 400;
+   color: var(--darkGrayishBlue);
+}
+
+@media screen and (max-width: 475px) {
+   .card-wrapper{
+      width: 326px;
+      height: 374px;
+   }
+
+   .user-picture{
+      left: 115px;
+   }
+
+   .separator{
+      margin-top: 24px;
+   }
+}
